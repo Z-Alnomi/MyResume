@@ -1,0 +1,17 @@
+﻿@page
+@{
+    ViewData["Title"] = "Languages";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Languages</h2>
+
+@(Html.DevExtreme().DataGrid<Core.Entities.Languages>().AutoConfigDataGrid("Languages")
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+        columns.AddFor(m => m.Level);
+        columns.AddFor(m => m.IsMotherLang);
+        columns.AddFor(m => m.ProfileId).AutoConfigLookUp("Profile");
+    })
+)

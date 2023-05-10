@@ -30,6 +30,7 @@ namespace Infrastructure
 
             modelBuilder.Entity<Profile>().Navigation(e => e.Address).AutoInclude();
             modelBuilder.Entity<Profile>().Navigation(e => e.Experience).AutoInclude();
+            modelBuilder.Entity<Profile>().Navigation(e => e.Skills).AutoInclude();
         }
      
         public  DbSet<Profile> Profile { get; set; }

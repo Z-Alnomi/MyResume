@@ -127,6 +127,21 @@
                         .Icon("info")
                         .Option("path", GetUrl("/Resume/Education"))
                         .Selected(IsCurrentUrl("/Resume/Education"));
+                    items.Add()
+                        .Text("Skills")
+                        .Icon("info")
+                        .Option("path", GetUrl("/Resume/Skills"))
+                        .Selected(IsCurrentUrl("/Resume/Skills"));
+                    items.Add()
+                        .Text("Languages")
+                        .Icon("info")
+                        .Option("path", GetUrl("/Resume/Languages"))
+                        .Selected(IsCurrentUrl("/Resume/Languages"));
+                    items.Add()
+                        .Text("Hobbies")
+                        .Icon("info")
+                        .Option("path", GetUrl("/Resume/Hobbies"))
+                        .Selected(IsCurrentUrl("/Resume/Hobbies"));
 
                 })
                 .ExpandEvent(TreeViewExpandEvent.Click)

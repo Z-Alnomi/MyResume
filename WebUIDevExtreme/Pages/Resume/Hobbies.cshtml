@@ -1,0 +1,18 @@
+﻿@page
+@{
+    ViewData["Title"] = "Hobbies";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Hobbies</h2>
+
+@(Html.DevExtreme().DataGrid<Core.Entities.Hobbies>().AutoConfigDataGrid("Hobbies")
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+        columns.AddFor(m => m.Name);
+        columns.AddFor(m => m.ShortName);
+        columns.AddFor(m => m.Description);
+        columns.AddFor(m => m.ProfileId).AutoConfigLookUp("Profile");
+    })
+)
